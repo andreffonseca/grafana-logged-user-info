@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['app/core/config', 'app/plugins/sdk', 'moment'], function (_export, _context) {
+System.register(['app/core/config', 'app/plugins/sdk'], function (_export, _context) {
   "use strict";
 
-  var config, PanelCtrl, moment, _createClass, ClockCtrl;
+  var config, PanelCtrl, _createClass, ClockCtrl;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -40,8 +40,6 @@ System.register(['app/core/config', 'app/plugins/sdk', 'moment'], function (_exp
       config = _appCoreConfig.default;
     }, function (_appPluginsSdk) {
       PanelCtrl = _appPluginsSdk.PanelCtrl;
-    }, function (_moment) {
-      moment = _moment.default;
     }],
     execute: function () {
       _createClass = function () {
@@ -69,11 +67,12 @@ System.register(['app/core/config', 'app/plugins/sdk', 'moment'], function (_exp
           _classCallCheck(this, ClockCtrl);
 
           console.log("Constructor...");
-          console.log(config);
+          console.log(config.user);
 
           var _this = _possibleConstructorReturn(this, (ClockCtrl.__proto__ || Object.getPrototypeOf(ClockCtrl)).call(this, $scope, $injector));
 
           _this.updateClock();
+
           return _this;
         }
 
@@ -82,8 +81,7 @@ System.register(['app/core/config', 'app/plugins/sdk', 'moment'], function (_exp
           value: function updateClock() {
             var _this2 = this;
 
-            console.log("update funtion...");
-            this.time = moment().format('hh:mm:ss');
+            //this.time = moment().format('hh:mm:ss');
             this.$timeout(function () {
               _this2.updateClock();
             }, 1000);
