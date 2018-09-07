@@ -78,7 +78,7 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
           console.log(variableSrv);
           //console.log(this.dashboard.templating);
           console.log('end....');
-          updateUserVariable('username', 'it170302');
+          _this.updateUserVariable('username', 'it170302');
           return _this;
         }
 

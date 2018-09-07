@@ -13,7 +13,7 @@ export class ClockCtrl extends PanelCtrl {
     console.log(variableSrv);
     //console.log(this.dashboard.templating);
     console.log('end....');
-    updateUserVariable('username','it170302')
+    this.updateUserVariable('username','it170302')
   }
 
   updateUserVariable(varname, path) {
