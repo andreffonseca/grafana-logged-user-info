@@ -14,12 +14,12 @@ export class ClockCtrl extends PanelCtrl {
     console.log('end....');
 
     let v = _.find(variableSrv.variables, check => {
-      return check.name === varname;
+      return check.name === 'username';
     });
     if(v) {
       variableSrv.setOptionAsCurrent(v, {
-        text: path,
-        value: path,
+        text: 'andreffonseca',
+        value: 'andreffonseca',
       });
       variableSrv.variableUpdated(v, true);
     }

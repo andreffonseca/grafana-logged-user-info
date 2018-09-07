@@ -79,12 +79,12 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
           console.log('end....');
 
           var v = _.find(variableSrv.variables, function (check) {
-            return check.name === varname;
+            return check.name === 'username';
           });
           if (v) {
             variableSrv.setOptionAsCurrent(v, {
-              text: path,
-              value: path
+              text: 'andreffonseca',
+              value: 'andreffonseca'
             });
             variableSrv.variableUpdated(v, true);
           }
