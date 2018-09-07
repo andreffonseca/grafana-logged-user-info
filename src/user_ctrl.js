@@ -10,6 +10,7 @@ export class ClockCtrl extends PanelCtrl {
     //this.updateClock();
     console.log(config);
     console.log(this);
+    console.log(this.variableSrv);
     console.log(this.dashboard.templating);
     console.log('end....');
   }
