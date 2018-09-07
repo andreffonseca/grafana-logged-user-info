@@ -75,7 +75,7 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
 
           //this.updateClock();
           /*console.log(config);*/
-          console.log(coreModule);
+          console.log(_this);
           //console.log(this.dashboard.templating);
           console.log('end....');
           return _this;
