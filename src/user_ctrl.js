@@ -5,6 +5,7 @@ import moment from 'moment';
 export class ClockCtrl extends PanelCtrl {
   constructor($scope, $injector) {
     console.log("Constructor...");
+    console.log(config);
     super($scope, $injector);
     this.updateClock();
   }
