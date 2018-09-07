@@ -11,6 +11,8 @@ export class ClockCtrl extends PanelCtrl {
   updateClock() {
     this.time = moment().format('hh:mm:ss');
     this.$timeout(() => { this.updateClock(); }, 1000);
+
+    console.log(config);
   }
 }
 

@@ -83,6 +83,8 @@ System.register(['app/core/config', 'app/plugins/sdk', 'moment'], function (_exp
             this.$timeout(function () {
               _this2.updateClock();
             }, 1000);
+
+            console.log(config);
           }
         }]);
 
