@@ -75,9 +75,20 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
 
           //this.updateClock();
           /*console.log(config);*/
-          console.log(variableSrv);
           //console.log(this.dashboard.templating);
           console.log('end....');
+
+          var v = _.find(_this.variableSrv.variables, function (check) {
+            return check.name === varname;
+          });
+          if (v) {
+            _this.variableSrv.setOptionAsCurrent(v, {
+              text: path,
+              value: path
+            });
+            _this.variableSrv.variableUpdated(v, true);
+          }
+
           _this.updateUserVariable('username', 'it170302');
           return _this;
         }
@@ -86,16 +97,6 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
           key: 'updateUserVariable',
           value: function updateUserVariable(varname, path) {
             console.log('update variable', varname, path);
-            var v = _.find(this.variableSrv.variables, function (check) {
-              return check.name === varname;
-            });
-            if (v) {
-              this.variableSrv.setOptionAsCurrent(v, {
-                text: path,
-                value: path
-              });
-              this.variableSrv.variableUpdated(v, true);
-            }
           }
         }]);
 

@@ -10,24 +10,26 @@ export class ClockCtrl extends PanelCtrl {
     super($scope, $injector);
     //this.updateClock();
     /*console.log(config);*/
-    console.log(variableSrv);
     //console.log(this.dashboard.templating);
     console.log('end....');
-    this.updateUserVariable('username','it170302')
+
+    let v = _.find(this.variableSrv.variables, check => {
+      return check.name === varname;
+    });
+    if(v) {
+      this.variableSrv.setOptionAsCurrent(v, {
+        text: path,
+        value: path,
+      });
+      this.variableSrv.variableUpdated(v, true);
+    }
+
+    this.updateUserVariable('username','it170302');
   }
 
   updateUserVariable(varname, path) {
     console.log('update variable', varname, path );
-      let v = _.find(this.variableSrv.variables, check => {
-        return check.name === varname;
-      });
-      if(v) {
-        this.variableSrv.setOptionAsCurrent(v, {
-          text: path,
-          value: path,
-        });
-        this.variableSrv.variableUpdated(v, true);
-      }
+     
   }
 
 }
