@@ -1,5 +1,5 @@
 import config from 'app/core/config';
-import VariableSrv from 'app/fetures/templating/variable_srv';
+import variableSrv from 'app/fetures/templating/variable_srv';
 import {PanelCtrl} from 'app/plugins/sdk';
 
 export class ClockCtrl extends PanelCtrl {
@@ -11,11 +11,9 @@ export class ClockCtrl extends PanelCtrl {
     //this.updateClock();
     console.log(config);
     console.log(this);
-    console.log(this.VariableSrv);
+    console.log(variableSrv);
     console.log(this.dashboard.templating);
     console.log('end....');
-
-    this.updateVarable('username','aasss');
   }
 
   updateUserVariable() {
@@ -24,19 +22,6 @@ export class ClockCtrl extends PanelCtrl {
     
   }
 
-  updateVarable(varname, path) {
-    console.log('update variable', varname, path );
-    let v = _.find(this.variableSrv.variables, check => {
-      return check.name === varname;
-    });
-    if(v) {
-      this.variableSrv.setOptionAsCurrent(v, {
-        text: path,
-        value: path,
-      });
-      this.variableSrv.variableUpdated(v, true);
-    }
-}
 }
 
 ClockCtrl.templateUrl = 'module.html';

@@ -3,7 +3,7 @@
 System.register(['app/core/config', 'app/fetures/templating/variable_srv', 'app/plugins/sdk'], function (_export, _context) {
   "use strict";
 
-  var config, VariableSrv, PanelCtrl, _createClass, ClockCtrl;
+  var config, variableSrv, PanelCtrl, _createClass, ClockCtrl;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -39,7 +39,7 @@ System.register(['app/core/config', 'app/fetures/templating/variable_srv', 'app/
     setters: [function (_appCoreConfig) {
       config = _appCoreConfig.default;
     }, function (_appFeturesTemplatingVariable_srv) {
-      VariableSrv = _appFeturesTemplatingVariable_srv.default;
+      variableSrv = _appFeturesTemplatingVariable_srv.default;
     }, function (_appPluginsSdk) {
       PanelCtrl = _appPluginsSdk.PanelCtrl;
     }],
@@ -76,11 +76,9 @@ System.register(['app/core/config', 'app/fetures/templating/variable_srv', 'app/
           //this.updateClock();
           console.log(config);
           console.log(_this);
-          console.log(_this.VariableSrv);
+          console.log(variableSrv);
           console.log(_this.dashboard.templating);
           console.log('end....');
-
-          _this.updateVarable('username', 'aasss');
           return _this;
         }
 
@@ -90,21 +88,6 @@ System.register(['app/core/config', 'app/fetures/templating/variable_srv', 'app/
             //this.time = moment().format('hh:mm:ss');
             //this.$timeout(() => { this.updateClock(); }, 1000);
 
-          }
-        }, {
-          key: 'updateVarable',
-          value: function updateVarable(varname, path) {
-            console.log('update variable', varname, path);
-            var v = _.find(this.variableSrv.variables, function (check) {
-              return check.name === varname;
-            });
-            if (v) {
-              this.variableSrv.setOptionAsCurrent(v, {
-                text: path,
-                value: path
-              });
-              this.variableSrv.variableUpdated(v, true);
-            }
           }
         }]);
 
