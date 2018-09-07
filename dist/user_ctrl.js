@@ -78,7 +78,7 @@ System.register(['app/core/config', 'app/plugins/sdk'], function (_export, _cont
           console.log(_this.dashboard.templating);
           console.log('end....');
 
-          updateVarable('username', 'aasss');
+          _this.updateVarable('username', 'aasss');
           return _this;
         }
 
