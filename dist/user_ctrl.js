@@ -75,7 +75,7 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
 
           //this.updateClock();
           /*console.log(config);*/
-          var variable = _.find(_this.templateVariables, { 'name': 'pod' });
+          console.log(_this.templateVariables);
           console.log(variable);
           console.log(VariableSrv);
           //console.log(this.dashboard.templating);
