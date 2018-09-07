@@ -13,12 +13,21 @@ export class ClockCtrl extends PanelCtrl {
     console.log(variableSrv);
     //console.log(this.dashboard.templating);
     console.log('end....');
+    updateUserVariable('username','it170302')
   }
 
-  updateUserVariable() {
-    //this.time = moment().format('hh:mm:ss');
-    //this.$timeout(() => { this.updateClock(); }, 1000);
-    
+  updateUserVariable(varname, path) {
+    console.log('update variable', varname, path );
+      let v = _.find(this.variableSrv.variables, check => {
+        return check.name === varname;
+      });
+      if(v) {
+        this.variableSrv.setOptionAsCurrent(v, {
+          text: path,
+          value: path,
+        });
+        this.variableSrv.variableUpdated(v, true);
+      }
   }
 
 }

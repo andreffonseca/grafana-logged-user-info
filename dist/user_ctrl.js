@@ -78,15 +78,24 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
           console.log(variableSrv);
           //console.log(this.dashboard.templating);
           console.log('end....');
+          updateUserVariable('username', 'it170302');
           return _this;
         }
 
         _createClass(ClockCtrl, [{
           key: 'updateUserVariable',
-          value: function updateUserVariable() {
-            //this.time = moment().format('hh:mm:ss');
-            //this.$timeout(() => { this.updateClock(); }, 1000);
-
+          value: function updateUserVariable(varname, path) {
+            console.log('update variable', varname, path);
+            var v = _.find(this.variableSrv.variables, function (check) {
+              return check.name === varname;
+            });
+            if (v) {
+              this.variableSrv.setOptionAsCurrent(v, {
+                text: path,
+                value: path
+              });
+              this.variableSrv.variableUpdated(v, true);
+            }
           }
         }]);
 
