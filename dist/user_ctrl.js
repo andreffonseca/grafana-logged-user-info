@@ -67,7 +67,7 @@ System.register(['app/core/config', 'app/plugins/sdk'], function (_export, _cont
           _classCallCheck(this, ClockCtrl);
 
           console.log("Constructor...");
-          console.log(config);
+          console.log(config.bootData.user);
 
           var _this = _possibleConstructorReturn(this, (ClockCtrl.__proto__ || Object.getPrototypeOf(ClockCtrl)).call(this, $scope, $injector));
 
