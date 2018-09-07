@@ -1,4 +1,5 @@
 import config from 'app/core/config';
+import VariableSrv from 'app/fetures/templating/variable_srv';
 import {PanelCtrl} from 'app/plugins/sdk';
 
 export class ClockCtrl extends PanelCtrl {
@@ -10,7 +11,7 @@ export class ClockCtrl extends PanelCtrl {
     //this.updateClock();
     console.log(config);
     console.log(this);
-    console.log(this.variableSrv);
+    console.log(this.VariableSrv);
     console.log(this.dashboard.templating);
     console.log('end....');
 
