@@ -68,6 +68,8 @@ System.register(['app/core/config', 'app/plugins/sdk', 'moment'], function (_exp
         function ClockCtrl($scope, $injector) {
           _classCallCheck(this, ClockCtrl);
 
+          console.log("Constructor...");
+
           var _this = _possibleConstructorReturn(this, (ClockCtrl.__proto__ || Object.getPrototypeOf(ClockCtrl)).call(this, $scope, $injector));
 
           _this.updateClock();
@@ -79,12 +81,11 @@ System.register(['app/core/config', 'app/plugins/sdk', 'moment'], function (_exp
           value: function updateClock() {
             var _this2 = this;
 
+            console.log("update funtion...");
             this.time = moment().format('hh:mm:ss');
             this.$timeout(function () {
               _this2.updateClock();
             }, 1000);
-
-            console.log(config);
           }
         }]);
 
