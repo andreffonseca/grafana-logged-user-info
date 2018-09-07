@@ -9,10 +9,11 @@ export class ClockCtrl extends PanelCtrl {
     console.log(config.bootData.user);
     super($scope, $injector);
     //this.updateClock();
-    console.log(config);
-
+    /*console.log(config);*/
+    const variable = _.find(this.templateVariables, {'name': 'pod'});
+    console.log(variable);
     console.log(VariableSrv);
-    console.log(this.dashboard.templating);
+    //console.log(this.dashboard.templating);
     console.log('end....');
   }
 

@@ -74,10 +74,11 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
           var _this = _possibleConstructorReturn(this, (ClockCtrl.__proto__ || Object.getPrototypeOf(ClockCtrl)).call(this, $scope, $injector));
 
           //this.updateClock();
-          console.log(config);
-
+          /*console.log(config);*/
+          var variable = _.find(_this.templateVariables, { 'name': 'pod' });
+          console.log(variable);
           console.log(VariableSrv);
-          console.log(_this.dashboard.templating);
+          //console.log(this.dashboard.templating);
           console.log('end....');
           return _this;
         }
