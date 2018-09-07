@@ -65,7 +65,7 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
       _export('ClockCtrl', ClockCtrl = function (_PanelCtrl) {
         _inherits(ClockCtrl, _PanelCtrl);
 
-        function ClockCtrl($scope, $injector) {
+        function ClockCtrl($scope, $injector, datasourceSrv, variableSrv) {
           _classCallCheck(this, ClockCtrl);
 
           console.log("Constructor...");
@@ -75,7 +75,7 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
 
           //this.updateClock();
           /*console.log(config);*/
-          console.log(_this);
+          console.log(variableSrv);
           //console.log(this.dashboard.templating);
           console.log('end....');
           return _this;

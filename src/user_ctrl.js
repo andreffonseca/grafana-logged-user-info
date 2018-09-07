@@ -3,14 +3,14 @@ import {coreModule} from 'app/core/core';
 import {PanelCtrl} from 'app/plugins/sdk';
 
 export class ClockCtrl extends PanelCtrl {
-  constructor($scope, $injector) {
+  constructor($scope, $injector, datasourceSrv,  variableSrv) {
 
     console.log("Constructor...");
     console.log(config.bootData.user);
     super($scope, $injector);
     //this.updateClock();
     /*console.log(config);*/
-    console.log(this);
+    console.log(variableSrv);
     //console.log(this.dashboard.templating);
     console.log('end....');
   }
