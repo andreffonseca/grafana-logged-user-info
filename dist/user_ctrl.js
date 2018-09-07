@@ -3,7 +3,7 @@
 System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], function (_export, _context) {
   "use strict";
 
-  var config, contextSrv, PanelCtrl, _createClass, ClockCtrl;
+  var config, variableSrv, PanelCtrl, _createClass, ClockCtrl;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -39,7 +39,7 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
     setters: [function (_appCoreConfig) {
       config = _appCoreConfig.default;
     }, function (_appCoreCore) {
-      contextSrv = _appCoreCore.contextSrv;
+      variableSrv = _appCoreCore.variableSrv;
     }, function (_appPluginsSdk) {
       PanelCtrl = _appPluginsSdk.PanelCtrl;
     }],
@@ -75,8 +75,8 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
 
           //this.updateClock();
           console.log(config);
-          console.log(_this);
-          console.log(contextSrv);
+
+          console.log(variableSrv);
           console.log(_this.dashboard.templating);
           console.log('end....');
           return _this;
