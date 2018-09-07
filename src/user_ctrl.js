@@ -1,5 +1,5 @@
 import config from 'app/core/config';
-import {VariableSrv} from 'app/features/templating/all';
+import {VariableSrv} from 'app/features/templating/variable_srv';
 import {PanelCtrl} from 'app/plugins/sdk';
 
 export class ClockCtrl extends PanelCtrl {
