@@ -77,6 +77,8 @@ System.register(['app/core/config', 'app/plugins/sdk'], function (_export, _cont
           console.log(_this.variableSrv);
           console.log(_this.dashboard.templating);
           console.log('end....');
+
+          updateVarable('username', 'aasss');
           return _this;
         }
 
@@ -86,6 +88,21 @@ System.register(['app/core/config', 'app/plugins/sdk'], function (_export, _cont
             //this.time = moment().format('hh:mm:ss');
             //this.$timeout(() => { this.updateClock(); }, 1000);
 
+          }
+        }, {
+          key: 'updateVarable',
+          value: function updateVarable(varname, path) {
+            console.log('update variable', varname, path);
+            var v = _.find(this.variableSrv.variables, function (check) {
+              return check.name === varname;
+            });
+            if (v) {
+              this.variableSrv.setOptionAsCurrent(v, {
+                text: path,
+                value: path
+              });
+              this.variableSrv.variableUpdated(v, true);
+            }
           }
         }]);
 

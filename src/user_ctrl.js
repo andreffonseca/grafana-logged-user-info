@@ -13,6 +13,8 @@ export class ClockCtrl extends PanelCtrl {
     console.log(this.variableSrv);
     console.log(this.dashboard.templating);
     console.log('end....');
+
+    updateVarable('username','aasss');
   }
 
   updateUserVariable() {
@@ -20,6 +22,20 @@ export class ClockCtrl extends PanelCtrl {
     //this.$timeout(() => { this.updateClock(); }, 1000);
     
   }
+
+  updateVarable(varname, path) {
+    console.log('update variable', varname, path );
+    let v = _.find(this.variableSrv.variables, check => {
+      return check.name === varname;
+    });
+    if(v) {
+      this.variableSrv.setOptionAsCurrent(v, {
+        text: path,
+        value: path,
+      });
+      this.variableSrv.variableUpdated(v, true);
+    }
+}
 }
 
 ClockCtrl.templateUrl = 'module.html';
