@@ -1,5 +1,5 @@
 import config from 'app/core/config';
-import {VariableSrv} from 'app/core/core';
+import {coreModule} from 'app/core/core';
 import {PanelCtrl} from 'app/plugins/sdk';
 
 export class ClockCtrl extends PanelCtrl {
@@ -10,9 +10,7 @@ export class ClockCtrl extends PanelCtrl {
     super($scope, $injector);
     //this.updateClock();
     /*console.log(config);*/
-    console.log(this.templateVariables);
-    console.log(variable);
-    console.log(VariableSrv);
+    console.log(coreModule);
     //console.log(this.dashboard.templating);
     console.log('end....');
   }
