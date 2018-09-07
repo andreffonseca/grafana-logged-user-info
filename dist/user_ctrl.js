@@ -73,6 +73,8 @@ System.register(['app/core/config', 'app/plugins/sdk'], function (_export, _cont
 
           //this.updateClock();
           console.log(config);
+
+          console.log(_this.variableSrv.variables);
           return _this;
         }
 
