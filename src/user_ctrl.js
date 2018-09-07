@@ -1,5 +1,5 @@
 import config from 'app/core/config';
-import variableSrv from 'app/fetures/templating/variable_srv';
+import variableSrv from 'app/fetures/templating/variableSrv';
 import {PanelCtrl} from 'app/plugins/sdk';
 
 export class ClockCtrl extends PanelCtrl {

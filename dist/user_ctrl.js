@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['app/core/config', 'app/fetures/templating/variable_srv', 'app/plugins/sdk'], function (_export, _context) {
+System.register(['app/core/config', 'app/fetures/templating/variableSrv', 'app/plugins/sdk'], function (_export, _context) {
   "use strict";
 
   var config, variableSrv, PanelCtrl, _createClass, ClockCtrl;
@@ -38,8 +38,8 @@ System.register(['app/core/config', 'app/fetures/templating/variable_srv', 'app/
   return {
     setters: [function (_appCoreConfig) {
       config = _appCoreConfig.default;
-    }, function (_appFeturesTemplatingVariable_srv) {
-      variableSrv = _appFeturesTemplatingVariable_srv.default;
+    }, function (_appFeturesTemplatingVariableSrv) {
+      variableSrv = _appFeturesTemplatingVariableSrv.default;
     }, function (_appPluginsSdk) {
       PanelCtrl = _appPluginsSdk.PanelCtrl;
     }],
