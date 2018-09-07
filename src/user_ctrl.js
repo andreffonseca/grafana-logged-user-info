@@ -9,8 +9,9 @@ export class ClockCtrl extends PanelCtrl {
     super($scope, $injector);
     //this.updateClock();
     console.log(config);
-
     console.log(this);
+
+    console.log('end....');
   }
 
   updateClock() {
