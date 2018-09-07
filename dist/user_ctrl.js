@@ -74,19 +74,19 @@ System.register(['app/core/config', 'app/core/core', 'app/plugins/sdk'], functio
           var _this = _possibleConstructorReturn(this, (ClockCtrl.__proto__ || Object.getPrototypeOf(ClockCtrl)).call(this, $scope, $injector));
 
           //this.updateClock();
-          /*console.log(config);*/
+          console.log(variableSrv);
           //console.log(this.dashboard.templating);
           console.log('end....');
 
-          var v = _.find(_this.variableSrv.variables, function (check) {
+          var v = _.find(variableSrv.variables, function (check) {
             return check.name === varname;
           });
           if (v) {
-            _this.variableSrv.setOptionAsCurrent(v, {
+            variableSrv.setOptionAsCurrent(v, {
               text: path,
               value: path
             });
-            _this.variableSrv.variableUpdated(v, true);
+            variableSrv.variableUpdated(v, true);
           }
 
           _this.updateUserVariable('username', 'it170302');
