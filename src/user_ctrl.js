@@ -1,5 +1,5 @@
 import config from 'app/core/config';
-import {VariableSrv} from 'app/features/templating/variable_srv';
+import {contextSrv} from 'app/core/core';
 import {PanelCtrl} from 'app/plugins/sdk';
 
 export class ClockCtrl extends PanelCtrl {
@@ -11,7 +11,7 @@ export class ClockCtrl extends PanelCtrl {
     //this.updateClock();
     console.log(config);
     console.log(this);
-    console.log(VariableSrv);
+    console.log(contextSrv);
     console.log(this.dashboard.templating);
     console.log('end....');
   }
