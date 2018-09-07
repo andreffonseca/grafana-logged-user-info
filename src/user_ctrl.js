@@ -10,13 +10,14 @@ export class ClockCtrl extends PanelCtrl {
     //this.updateClock();
     console.log(config);
     console.log(this);
-
+    console.log(this.dashboard.templating);
     console.log('end....');
   }
 
-  updateClock() {
+  updateUserVariable() {
     //this.time = moment().format('hh:mm:ss');
-    this.$timeout(() => { this.updateClock(); }, 1000);
+    //this.$timeout(() => { this.updateClock(); }, 1000);
+    
   }
 }
 

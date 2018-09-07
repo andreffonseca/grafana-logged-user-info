@@ -74,20 +74,17 @@ System.register(['app/core/config', 'app/plugins/sdk'], function (_export, _cont
           //this.updateClock();
           console.log(config);
           console.log(_this);
-
+          console.log(_this.dashboard.templating);
           console.log('end....');
           return _this;
         }
 
         _createClass(ClockCtrl, [{
-          key: 'updateClock',
-          value: function updateClock() {
-            var _this2 = this;
-
+          key: 'updateUserVariable',
+          value: function updateUserVariable() {
             //this.time = moment().format('hh:mm:ss');
-            this.$timeout(function () {
-              _this2.updateClock();
-            }, 1000);
+            //this.$timeout(() => { this.updateClock(); }, 1000);
+
           }
         }]);
 
