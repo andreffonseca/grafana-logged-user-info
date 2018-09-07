@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['app/core/config', 'app/features/templating/all', 'app/plugins/sdk'], function (_export, _context) {
+System.register(['app/core/config', 'app/features/all', 'app/plugins/sdk'], function (_export, _context) {
   "use strict";
 
   var config, VariableSrv, PanelCtrl, _createClass, ClockCtrl;
@@ -38,8 +38,8 @@ System.register(['app/core/config', 'app/features/templating/all', 'app/plugins/
   return {
     setters: [function (_appCoreConfig) {
       config = _appCoreConfig.default;
-    }, function (_appFeaturesTemplatingAll) {
-      VariableSrv = _appFeaturesTemplatingAll.VariableSrv;
+    }, function (_appFeaturesAll) {
+      VariableSrv = _appFeaturesAll.VariableSrv;
     }, function (_appPluginsSdk) {
       PanelCtrl = _appPluginsSdk.PanelCtrl;
     }],
