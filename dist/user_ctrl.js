@@ -71,8 +71,8 @@ System.register(['app/core/config', 'app/plugins/sdk'], function (_export, _cont
 
           var _this = _possibleConstructorReturn(this, (ClockCtrl.__proto__ || Object.getPrototypeOf(ClockCtrl)).call(this, $scope, $injector));
 
-          _this.updateClock();
-
+          //this.updateClock();
+          console.log(config);
           return _this;
         }
 

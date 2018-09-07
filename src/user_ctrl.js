@@ -7,8 +7,8 @@ export class ClockCtrl extends PanelCtrl {
     console.log("Constructor...");
     console.log(config.bootData.user);
     super($scope, $injector);
-    this.updateClock();
-
+    //this.updateClock();
+    console.log(config);
   }
 
   updateClock() {
