@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['app/core/config', 'app/fetures/templating/variableSrv', 'app/plugins/sdk'], function (_export, _context) {
+System.register(['app/core/config', 'app/features/templating/all', 'app/plugins/sdk'], function (_export, _context) {
   "use strict";
 
-  var config, variableSrv, PanelCtrl, _createClass, ClockCtrl;
+  var config, VariableSrv, PanelCtrl, _createClass, ClockCtrl;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -38,8 +38,8 @@ System.register(['app/core/config', 'app/fetures/templating/variableSrv', 'app/p
   return {
     setters: [function (_appCoreConfig) {
       config = _appCoreConfig.default;
-    }, function (_appFeturesTemplatingVariableSrv) {
-      variableSrv = _appFeturesTemplatingVariableSrv.default;
+    }, function (_appFeaturesTemplatingAll) {
+      VariableSrv = _appFeaturesTemplatingAll.VariableSrv;
     }, function (_appPluginsSdk) {
       PanelCtrl = _appPluginsSdk.PanelCtrl;
     }],
@@ -76,7 +76,7 @@ System.register(['app/core/config', 'app/fetures/templating/variableSrv', 'app/p
           //this.updateClock();
           console.log(config);
           console.log(_this);
-          console.log(variableSrv);
+          console.log(VariableSrv);
           console.log(_this.dashboard.templating);
           console.log('end....');
           return _this;
